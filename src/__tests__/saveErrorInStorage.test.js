@@ -36,4 +36,28 @@ describe('must save error into session storage occurred at inputs', () => {
         })
     })
 
+    escribe('email', () => {
+        const re = /^[a-zA-Z]*@[a-zA-Z]*\.[a-zA-Z]*$/g
+        it("'example@e.com' must not save error into session storage", () => {
+            saveErrorInStorage(
+                re,
+                'example@e.com',
+                'email',
+                'error at email')
+
+            expect(sessionStorage.getItem('errors')).toStrictEqual("{}")
+        })
+
+        it("'23123aa@e.com' must save error into session storage", () => {
+            saveErrorInStorage(
+                re,
+                '23123aa@e.com',
+                'email',
+                'error at email')
+
+            expect(sessionStorage.getItem('errors')).toStrictEqual("{\"email\":\"error at email\"}")
+        })
+
+    })
+
 })
