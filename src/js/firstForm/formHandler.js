@@ -18,6 +18,11 @@ const firstFormHandler = () => {
         const emailVal = document.querySelector('#email').value
         const phoneVal = document.querySelector('#phone').value
 
+        inputValidator(firstNameVal, /^[a-zA-Z]+$/g, 'first-name', validationErrors.first_name)
+        inputValidator(lastNameVal, /^[a-zA-Z]+$/g, 'last-name', validationErrors.last_name)
+        inputValidator(emailVal, /^[a-zA-Z]*@[a-zA-Z]*\.[a-zA-Z]*$/g, 'email', validationErrors.email)
+        inputValidator(phoneVal, /^\(\d{3}\)\s\d{3}\s-\s\d{4}$/g, 'phone', validationErrors.phone)
+
     })
 }
 
