@@ -9,3 +9,7 @@ export const saveErrorInStorage = (validator, inputText, inputName, errorText) =
     }
     sessionStorage.setItem('errors', JSON.stringify(errorsObject))
 }
+export const inputValidator = (inputText, rePattern, inputName, errorText) => {
+    const validator = new RegExp(rePattern)
+    saveErrorInStorage(validator, inputText, inputName, errorText)
+}
