@@ -43,4 +43,33 @@ describe('isTextNotPassRe', () => {
             expect(isTextNotPassRe(re, text)).not.toBeFalsy()
         })
     })
+
+    describe("with '^\(\d{3}\)\s\d{3}\s-\s\d{4}$' re pattern for phone", () => {
+        const re = /^\(\d{3}\)\s\d{3}\s-\s\d{4}$/ // matches phone
+
+        it('012 142 - 1221 must return true', () => {
+            const text = '012 142 - 1221'
+            expect(isTextNotPassRe(re, text)).not.toBeFalsy()
+        })
+
+        it('(041)142 1212 must return true', () => {
+            const text = '(041)142 1212'
+            expect(isTextNotPassRe(re, text)).not.toBeFalsy()
+        })
+
+        it('(123) 111 -7777 must return true', () => {
+            const text = '(123) 111 -7777'
+            expect(isTextNotPassRe(re, text)).not.toBeFalsy()
+        })
+
+        it('(123) 123-12 must return true', () => {
+            const text = '(123) 123-12'
+            expect(isTextNotPassRe(re, text)).not.toBeFalsy()
+        })
+
+        it('(111) 222 - 3333 must return false', () => {
+            const text = '(111) 222 - 3333'
+            expect(isTextNotPassRe(re, text)).toBeFalsy()
+        })
+    })
 })
