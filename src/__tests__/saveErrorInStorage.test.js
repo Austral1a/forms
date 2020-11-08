@@ -60,4 +60,52 @@ describe('must save error into session storage occurred at inputs', () => {
 
     })
 
+    describe('phone', () => {
+        const re = /^\(\d{3}\)\s\d{3}\s-\s\d{4}$/g
+
+        it("'(123) 456 - 7890' must not save error into session storage", () => {
+            saveErrorInStorage(
+                re,
+                '(123) 456 - 7890',
+                'phone',
+                'error at phone'
+            )
+
+            expect(sessionStorage.getItem('errors')).toStrictEqual("{}")
+        })
+
+        it("'(123) 456-7890' must save error into session storage", () => {
+            saveErrorInStorage(
+                re,
+                '(123) 456-7890',
+                'phone',
+                'error at phone'
+            )
+
+            expect(sessionStorage.getItem('errors')).toStrictEqual("{\"phone\":\"error at phone\"}")
+        })
+
+        it("'(123)456 - 7890' must save error into session storage", () => {
+            saveErrorInStorage(
+                re,
+                '(123)456 - 7890',
+                'phone',
+                'error at phone'
+            )
+
+            expect(sessionStorage.getItem('errors')).toStrictEqual("{\"phone\":\"error at phone\"}")
+        })
+
+        it("'(123) 456 - 78' must save error into session storage", () => {
+            saveErrorInStorage(
+                re,
+                '(123) 456 - 78',
+                'phone',
+                'error at phone'
+            )
+
+            expect(sessionStorage.getItem('errors')).toStrictEqual("{\"phone\":\"error at phone\"}")
+        })
+    })
+
 })
