@@ -6,5 +6,8 @@ import firstFormHandler from './firstForm/formHandler'
 import secondFormHandler from './secondForm/formHandler'
 import {showAppropriateSubscription} from "./secondForm/showAppropriateSubscription";
 
+inputPhoneMask()
+firstFormHandler()
+
 secondFormHandler()
 showAppropriateSubscription()
