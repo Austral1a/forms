@@ -3,7 +3,7 @@ const switchToNextForm = (fromForm, toForm, formEvent) => {
     const errorsContainer = document.querySelector('header')
     // if there are errors it will show it on a screen
     if(errors.length > 0) {
-        e.preventDefault()
+        formEvent.preventDefault()
 
         errorsContainer.innerHTML = errors.join(',  <br>')
         // otherwise, show next form
