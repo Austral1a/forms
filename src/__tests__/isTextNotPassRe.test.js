@@ -19,4 +19,28 @@ describe('isTextNotPassRe', () => {
             expect(isTextNotPassRe(re, text)).not.toBeFalsy()
         })
     })
+
+    describe("with '/^[a-zA-Z]*@[a-zA-Z]*\.[a-zA-Z]*$/g' re pattern for email", () => {
+        const re = /^[a-zA-Z]*@[a-zA-Z]*\.[a-zA-Z]*$/g // matches email
+
+        it("example@e.com must return false", () => {
+            const text = 'example@e.com'
+            expect(isTextNotPassRe(re, text)).toBeFalsy()
+        })
+
+        it("exam1e@e.com must return true", () => {
+            const text = 'exam1e@e.com'
+            expect(isTextNotPassRe(re, text)).not.toBeFalsy()
+        })
+
+        it("example.com must return true", () => {
+            const text = 'example.com'
+            expect(isTextNotPassRe(re, text)).not.toBeFalsy()
+        })
+
+        it("example@com must return true", () => {
+            const text = 'example@com'
+            expect(isTextNotPassRe(re, text)).not.toBeFalsy()
+        })
+    })
 })
