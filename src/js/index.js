@@ -6,8 +6,17 @@ import firstFormHandler from './firstForm/formHandler'
 import secondFormHandler from './secondForm/formHandler'
 import {showAppropriateSubscription} from "./secondForm/showAppropriateSubscription";
 
+import thirdFormHandler from "./thirdForm/formHandler";
+import inputCardMask from "./thirdForm/inputCardMask";
+import expiryDayMask from "./thirdForm/expiryDayMask";
+
+
 inputPhoneMask()
 firstFormHandler()
 
 secondFormHandler()
 showAppropriateSubscription()
+
+thirdFormHandler()
+inputCardMask()
+expiryDayMask()
