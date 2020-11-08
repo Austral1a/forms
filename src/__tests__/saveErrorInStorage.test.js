@@ -108,4 +108,40 @@ describe('must save error into session storage occurred at inputs', () => {
         })
     })
 
+    describe('card', () => {
+        const re = /^\d{4}\s\d{4}\s\d{4}\s\d{4}$/
+        it("'1234 1234 1234 1234' must not save error into session storage", () => {
+            saveErrorInStorage(
+                re,
+                '1234 1234 1234 1234',
+                'phone',
+                'error at card'
+            )
+
+            expect(sessionStorage.getItem('errors')).toStrictEqual("{}")
+        })
+
+        it("'1234123412341234' must save error into session storage", () => {
+            saveErrorInStorage(
+                re,
+                '1234123412341234',
+                'card',
+                'error at card'
+            )
+
+            expect(sessionStorage.getItem('errors')).toStrictEqual("{\"card\":\"error at card\"}")
+        })
+
+        it("'1234 1234 1234 qwer' must save error into session storage", () => {
+            saveErrorInStorage(
+                re,
+                '1234 1234 1234 qwer',
+                'card',
+                'error at card'
+            )
+
+            expect(sessionStorage.getItem('errors')).toStrictEqual("{\"card\":\"error at card\"}")
+        })
+    })
+
 })
