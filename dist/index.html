@@ -10,6 +10,42 @@
 <body>
     <header id="errors"></header>
     <main>
-    <script src="./main.bundle.js"></script>
+        <form novalidate action="/" method="get" id="first-form">
+            <label for="first-name">First Name</label>
+            <input name="name" type="text" placeholder="First Name" id="first-name">
+            <label for="last-name">Last Name</label>
+            <input name="last_name" type="text" placeholder="Last Name" id="last-name">
+            <label for="email">Email</label>
+            <input name="email" type="text" placeholder="email@example.com" id="email">
+            <label for="phone">Phone</label>
+            <input name="phone" type="tel" placeholder="(123) 456 7890" id="phone">
+            <input name="" type="submit" value="Next" id="submit">
+        </form>
+        <form id="second-form" action="/" method="get">
+            <select name="subs_country" id="subscription-country">
+                <option selected value="us">United States</option>
+                <option value="ua">Ukraine</option>
+            </select>
+            <select name="subs_plan" id="subscription-plan">
+                <option selected value="free">Free</option>
+                <option value="basic">Basic</option>
+                <option value="premium">Premium</option>
+            </select>
+            <input type="submit" value="Next" id="submitSecond">
+            <div id="subscription-result">
+            </div>
+        </form>
+        <form id="third-form" action="/" method="get">
+            <label for="card">Card</label>
+            <input type="text" placeholder="1234 1234 1234 1234" id="card" name="card">
+            <label for="expiration-date">Expiration Date</label>
+            <input type="text" placeholder="MM/YYYY" id="expiration-date" name="expiration-date">
+            <label for="cvv">CVV</label>
+            <input type="text" placeholder="123" id="cvv" name="cvv" maxlength="3">
+            <input type="submit" value="Pay">
+        </form>
+    </main>
+
+<script src="./main.bundle.js"></script>
 </body>
 </html>
