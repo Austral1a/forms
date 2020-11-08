@@ -1,4 +1,5 @@
 import {inputValidator} from './inputValidator'
+import switchToNextForm from '../switchToNextForm'
 
 const validationErrors = {
     first_name: 'First name must contain only letters and not to be empty',
@@ -9,6 +10,7 @@ const validationErrors = {
 
 const firstFormHandler = () => {
     const firstForm = document.querySelector('#first-form')
+    const secondForm = document.querySelector('#second-form')
 
     firstForm.addEventListener('submit', (e) => {
         sessionStorage.setItem('errors', "{}")
@@ -23,6 +25,7 @@ const firstFormHandler = () => {
         inputValidator(emailVal, /^[a-zA-Z]*@[a-zA-Z]*\.[a-zA-Z]*$/g, 'email', validationErrors.email)
         inputValidator(phoneVal, /^\(\d{3}\)\s\d{3}\s-\s\d{4}$/g, 'phone', validationErrors.phone)
 
+        switchToNextForm(firstForm, secondForm, e)
     })
 }
 
