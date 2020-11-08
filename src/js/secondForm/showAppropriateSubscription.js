@@ -11,3 +11,17 @@ export const subscriptions = {
         premium: `${60 * 28}₴`
     }
 }
+
+export const showAppropriateSubscription = () => {
+    const subscriptionCountry = document.querySelector('#subscription-country')
+    const subscriptionPlan = document.querySelector('#subscription-plan')
+    const subscriptionResult = document.querySelector('#subscription-result')
+
+    const listener = () => {
+        subscriptionResult.textContent = subscriptions[subscriptionCountry.value][subscriptionPlan.value]
+    }
+
+    subscriptionCountry.addEventListener('change', listener)
+
+    subscriptionPlan.addEventListener('change', listener)
+}
