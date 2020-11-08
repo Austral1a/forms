@@ -6,3 +6,5 @@ const setUpSessionStorage = () => {
         sessionStorage.setItem('isFormsCompleted', "{}")
     }
 }
+
+export default setUpSessionStorage
