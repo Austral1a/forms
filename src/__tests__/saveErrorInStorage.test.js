@@ -144,4 +144,29 @@ describe('must save error into session storage occurred at inputs', () => {
         })
     })
 
+    describe('cvv', () => {
+        const re = /^\d{3}$/
+        it("'13' must save error into session storage", () => {
+            saveErrorInStorage(
+                re,
+                '13',
+                'cvv',
+                'error at cvv'
+            )
+
+            expect(sessionStorage.getItem('errors')).toStrictEqual("{\"cvv\":\"error at cvv\"}")
+        })
+
+        it("'321' must not save error into session storage", () => {
+            saveErrorInStorage(
+                re,
+                '321',
+                'cvv',
+                'error at cvv'
+            )
+
+            expect(sessionStorage.getItem('errors')).toStrictEqual("{}")
+        })
+    })
+
 })
