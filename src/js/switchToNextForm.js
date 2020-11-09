@@ -1,7 +1,11 @@
-const switchToNextForm = (fromForm, toForm, formEvent) => {
+const switchToNextForm = (fromForm, toForm, formEvent, lastForm) => {
     const errors = Object.values(JSON.parse(sessionStorage.getItem('errors')))
     const errorsContainer = document.querySelector('header')
     // if there are errors it will show it on a screen
+    if(lastForm) {
+        alert('success')
+        return
+    }
     if(errors.length > 0) {
         formEvent.preventDefault()
 
