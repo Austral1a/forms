@@ -9,8 +9,15 @@ const validationErrors = {
     cvv: 'CVV code must contain only 3 numbers'
 }
 
+export const cardNumberPattern = () => {
+    return /^\d{4}\s\d{4}\s\d{4}\s\d{4}$/
+}
 
-const thirdFormHandler = () => {
+export const cvvPattern = () => {
+    return /^\d{3}$/
+}
+
+export const thirdFormHandler = () => {
     const thirdForm = document.querySelector('#third-form')
     const successPayment = document.querySelector('#success-payment')
     const errorsContainer = document.querySelector('header')
@@ -27,12 +34,10 @@ const thirdFormHandler = () => {
         const expiryYear = expirationDate.replace(/\d+\//, '')
         const expiryMonth = expirationDate.replace(/\/\d+/, '')
 
-        inputValidator(card, /^\d{4}\s\d{4}\s\d{4}\s\d{4}$/, 'card', validationErrors.card)
+        inputValidator(card, cardNumberPattern(), 'card', validationErrors.card)
         expiryDayValidation(expiryYear, expiryMonth, 'expiration-date', validationErrors.expirationDate)
-        inputValidator(cvv, /^\d{3}$/, 'cvv', validationErrors.cvv)
+        inputValidator(cvv, cvvPattern(), 'cvv', validationErrors.cvv)
 
         switchToNextForm(thirdForm, successPayment, e, true)
     })
 }
-
-export default thirdFormHandler
