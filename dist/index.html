@@ -13,12 +13,16 @@
         <form novalidate action="/" method="get" id="first-form">
             <label for="first-name">First Name</label>
             <input name="name" type="text" placeholder="First Name" id="first-name">
+            <p class="form__first-name-error"></p>
             <label for="last-name">Last Name</label>
             <input name="last_name" type="text" placeholder="Last Name" id="last-name">
+            <p class="form__last-name-error"></p>
             <label for="email">Email</label>
             <input name="email" type="text" placeholder="email@example.com" id="email">
+            <p class="form__email-error"></p>
             <label for="phone">Phone</label>
             <input name="phone" type="tel" placeholder="(123) 456 7890" id="phone">
+            <p class="form__phone-error"></p>
             <input name="" type="submit" value="Next" id="submit">
         </form>
         <form id="second-form" action="/" method="get">
@@ -38,10 +42,13 @@
         <form id="third-form" action="/" method="get">
             <label for="card">Card</label>
             <input type="text" placeholder="1234 1234 1234 1234" id="card" name="card">
+            <p class="form__card-error"></p>
             <label for="expiration-date">Expiration Date</label>
             <input type="text" placeholder="MM/YYYY" id="expiration-date" name="expiration-date">
+            <p class="form__expiration-date-error"></p>
             <label for="cvv">CVV</label>
             <input type="text" placeholder="123" id="cvv" name="cvv" maxlength="3">
+            <p class="form__cvv-error"></p>
             <input type="submit" value="Pay">
         </form>
     </main>
