@@ -36,7 +36,7 @@ describe('must save error into session storage occurred at inputs', () => {
         })
     })
 
-    escribe('email', () => {
+    describe('email', () => {
         const re = /^[a-zA-Z]*@[a-zA-Z]*\.[a-zA-Z]*$/g
         it("'example@e.com' must not save error into session storage", () => {
             saveErrorInStorage(
