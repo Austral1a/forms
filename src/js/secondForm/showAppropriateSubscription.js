@@ -32,4 +32,9 @@ export const showAppropriateSubscription = () => {
         subscriptionPlan,
         subscriptionResult
     ))
+
+    // render default subscription plan
+    subscriptionPlan.value = 'free'
+    subscriptionPlan.dispatchEvent(new Event('change'))
+
 }
