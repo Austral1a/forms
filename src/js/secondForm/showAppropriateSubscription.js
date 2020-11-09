@@ -12,16 +12,24 @@ export const subscriptions = {
     }
 }
 
+export const listener = (country, plan, result) => {
+    result.textContent = subscriptions[country.value][plan.value]
+}
+
 export const showAppropriateSubscription = () => {
     const subscriptionCountry = document.querySelector('#subscription-country')
     const subscriptionPlan = document.querySelector('#subscription-plan')
     const subscriptionResult = document.querySelector('#subscription-result')
 
-    const listener = () => {
-        subscriptionResult.textContent = subscriptions[subscriptionCountry.value][subscriptionPlan.value]
-    }
+    subscriptionCountry.addEventListener('change', () => listener(
+        subscriptionCountry,
+        subscriptionPlan,
+        subscriptionResult
+    ))
 
-    subscriptionCountry.addEventListener('change', listener)
-
-    subscriptionPlan.addEventListener('change', listener)
+    subscriptionPlan.addEventListener('change', () => listener(
+        subscriptionCountry,
+        subscriptionPlan,
+        subscriptionResult
+    ))
 }
