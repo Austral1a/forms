@@ -27,7 +27,7 @@ const thirdFormHandler = () => {
         expiryDayValidation(expiryYear, expiryMonth, 'expiration-date', validationErrors.expirationDate)
         inputValidator(cvv, /^\d{3}$/, 'cvv', validationErrors.cvv)
 
-        switchToNextForm(thirdForm, successPayment, e)
+        switchToNextForm(thirdForm, successPayment, e, true)
     })
 }
 
