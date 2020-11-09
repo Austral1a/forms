@@ -9,6 +9,18 @@ const validationErrors = {
     phone: "Phone must be appropriate to '(123) 456 - 7890'"
 }
 
+const namePattern = () => {
+    return /^[a-zA-Z]+$/
+}
+
+const emailPattern = () => {
+    return /^[a-zA-Z]*@[a-zA-Z]*\.[a-zA-Z]*$/
+}
+
+const phonePattern = () => {
+    return /^\(\d{3}\)\s\d{3}\s-\s\d{4}$/
+}
+
 const firstFormHandler = () => {
     const firstForm = document.querySelector('#first-form')
     const secondForm = document.querySelector('#second-form')
@@ -24,10 +36,10 @@ const firstFormHandler = () => {
         const emailVal = document.querySelector('#email').value
         const phoneVal = document.querySelector('#phone').value
 
-        inputValidator(firstNameVal, /^[a-zA-Z]+$/g, 'first-name', validationErrors.first_name)
-        inputValidator(lastNameVal, /^[a-zA-Z]+$/g, 'last-name', validationErrors.last_name)
-        inputValidator(emailVal, /^[a-zA-Z]*@[a-zA-Z]*\.[a-zA-Z]*$/g, 'email', validationErrors.email)
-        inputValidator(phoneVal, /^\(\d{3}\)\s\d{3}\s-\s\d{4}$/g, 'phone', validationErrors.phone)
+        inputValidator(firstNameVal, namePattern(), 'first-name', validationErrors.first_name)
+        inputValidator(lastNameVal, namePattern(), 'last-name', validationErrors.last_name)
+        inputValidator(emailVal, emailPattern(), 'email', validationErrors.email)
+        inputValidator(phoneVal, phonePattern(), 'phone', validationErrors.phone)
 
         switchToNextForm(firstForm, secondForm, e)
     })
