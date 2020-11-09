@@ -1,5 +1,6 @@
 import {inputValidator} from './inputValidator'
 import switchToNextForm from '../switchToNextForm'
+import {errors} from '../index'
 
 const validationErrors = {
     first_name: 'First name must contain only letters and not to be empty',
@@ -11,9 +12,12 @@ const validationErrors = {
 const firstFormHandler = () => {
     const firstForm = document.querySelector('#first-form')
     const secondForm = document.querySelector('#second-form')
+    const errorsContainer = document.querySelector('header')
 
     firstForm.addEventListener('submit', (e) => {
-        sessionStorage.setItem('errors', "{}")
+        e.preventDefault()
+        errorsContainer.innerHTML = ''
+        errors.clear()
 
         const firstNameVal = document.querySelector('#first-name').value
         const lastNameVal = document.querySelector('#last-name').value

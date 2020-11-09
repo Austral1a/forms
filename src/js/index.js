@@ -1,5 +1,4 @@
 import '../css/index.css'
-import setUpSessionStorage from "./setUpSessionStorage";
 
 import inputPhoneMask from './firstForm/inputPhoneMask'
 import firstFormHandler from './firstForm/formHandler'
@@ -11,7 +10,7 @@ import thirdFormHandler from "./thirdForm/formHandler";
 import inputCardMask from "./thirdForm/inputCardMask";
 import expiryDayMask from "./thirdForm/expiryDayMask";
 
-setUpSessionStorage()
+export let errors = new Map()
 
 inputPhoneMask()
 firstFormHandler()

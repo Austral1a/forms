@@ -1,6 +1,7 @@
 import {inputValidator} from '../firstForm/inputValidator'
 import expiryDayValidation from './expiryDayValidation'
 import switchToNextForm from '../switchToNextForm'
+import {errors} from '../index'
 
 const validationErrors = {
     card: 'Card number must contain 16 numbers, not less, not more',
@@ -12,9 +13,12 @@ const validationErrors = {
 const thirdFormHandler = () => {
     const thirdForm = document.querySelector('#third-form')
     const successPayment = document.querySelector('#success-payment')
+    const errorsContainer = document.querySelector('header')
 
     thirdForm.addEventListener('submit', (e) => {
-        sessionStorage.setItem('errors', "{}")
+        e.preventDefault()
+        errorsContainer.innerHTML = ''
+        errors.clear()
 
         const card = document.querySelector('#card').value
         const expirationDate =document.querySelector('#expiration-date').value

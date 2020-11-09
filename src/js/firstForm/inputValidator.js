@@ -1,13 +1,22 @@
-export const isInputValid = (validator, inputText) => {
+import {errors} from '../index.js'
+export const isInputNotValid = (validator, inputText) => {
     return !validator.test(inputText)
 }
 
 export const saveErrorInStorage = (validator, inputText, inputName, errorText) => {
-    let errorsObject = JSON.parse(sessionStorage.getItem('errors'))
-    if(isInputValid(validator, inputText)) {
-        errorsObject[inputName] = errorText
+    const inputError = document.querySelector(`.form__${inputName}-error`)
+    const input = document.querySelector(`#${inputName}`)
+    if(isInputNotValid(validator, inputText)) {
+        errors.set(inputName, errorText)
+
+        input.style.marginBottom = '5px'
+        // if input is not valid, render an error
+        inputError.innerText = errorText
+        inputError.style.marginBottom = '20px'
+    } else {
+        //if input is valid, remove error
+        inputError.innerText = ''
     }
-    sessionStorage.setItem('errors', JSON.stringify(errorsObject))
 }
 export const inputValidator = (inputText, rePattern, inputName, errorText) => {
     const validator = new RegExp(rePattern)

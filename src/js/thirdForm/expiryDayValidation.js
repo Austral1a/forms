@@ -1,18 +1,28 @@
+import {errors} from '../index'
+
 const expiryDayValidation = (year, month, inputName, errorText) => {
     const currentDay = new Date()
     const expiryDay = new Date(+year, +month - 1, 1)
 
-    let errorsObject = JSON.parse(sessionStorage.getItem('errors'))
+    const inputError = document.querySelector(`.form__${inputName}-error`)
+    const input = document.querySelector(`#${inputName}`)
 
     // if expiry date has arrived
-    if(month > 12 || month < 1) {
-        errorsObject[inputName] = errorText
-    }
-    if(currentDay > expiryDay) {
-        errorsObject[inputName] = errorText
-    }
+    if(
+        (month > 12 || month < 1)
+        ||
+        (currentDay > expiryDay)
+    ) {
+        errors.set(inputName, errorText)
 
-    sessionStorage.setItem('errors', JSON.stringify(errorsObject))
+        input.style.marginBottom = '5px'
+        // if input is not valid, render an error
+        inputError.innerText = errorText
+        inputError.style.marginBottom = '20px'
+    } else {
+        //if input is valid, remove error
+        inputError.innerText = ''
+    }
 }
 
 export default expiryDayValidation

@@ -1,11 +1,15 @@
+import {errors} from '../js/index'
+
 const switchToNextForm = (fromForm, toForm, formEvent, lastForm) => {
-    const errors = Object.values(JSON.parse(sessionStorage.getItem('errors')))
     const errorsContainer = document.querySelector('header')
-    // if there are errors it will show it on a screen
-    if(errors.length > 0) {
+
+    // if there are no errors, show next form
+    if(errors.size) {
         formEvent.preventDefault()
 
-        errorsContainer.innerHTML = errors.join(',  <br>')
+        Object.values(errors).forEach((error) => {
+            errorsContainer.innerText += error
+        })
         // otherwise, show next form
     } else {
         if(lastForm) {
@@ -14,7 +18,7 @@ const switchToNextForm = (fromForm, toForm, formEvent, lastForm) => {
         }
         formEvent.preventDefault()
         // clean up errors
-        errorsContainer.innerHTML = ''
+        errorsContainer.innerText = ''
         // hide first form
         fromForm.style.display = 'none'
 
