@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
 $body-back-color: #9EB3C2;
 $form-back-color: #E6EBEF;
+$input-error-color: #D84040;
 
 @mixin form-element-padding {
     padding: 5px 7px;
@@ -50,6 +51,12 @@ form {
 
     #subscription-result {
         text-align: center;
+    }
+
+    .form__error {
+        color: $input-error-color;
+        font-size: 0.9em;
+        font-weight: bolder;
     }
 }
 
