@@ -10,6 +10,8 @@ import {thirdFormHandler} from "./thirdForm/formHandler";
 import inputCardMask from "./thirdForm/inputCardMask";
 import expiryDayMask from "./thirdForm/expiryDayMask";
 
+import {setTheme} from './changeTheme'
+
 export let errors = new Map()
 
 inputPhoneMask()
@@ -21,3 +23,5 @@ showAppropriateSubscription()
 thirdFormHandler()
 inputCardMask()
 expiryDayMask()
+
+setTheme()
