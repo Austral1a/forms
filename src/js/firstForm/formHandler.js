@@ -1,24 +1,15 @@
 import {inputValidator} from './inputValidator'
 import switchToNextForm from '../switchToNextForm'
 import {errors} from '../index'
+import namePattern from './namePattern'
+import emailPattern from './emailPattern'
+import phonePattern from './phonePattern'
 
 const validationErrors = {
     first_name: 'First name must contain only letters and not to be empty',
     last_name: 'Last name must contain only letters and not to be empty',
     email: "Email must be appropriate to 'email@example.com'",
     phone: "Phone must be appropriate to '(123) 456 - 7890'"
-}
-
-const namePattern = () => {
-    return /^[a-zA-Z]+$/
-}
-
-const emailPattern = () => {
-    return /^[a-zA-Z]+@[a-zA-Z]+\.[a-zA-Z]+$/
-}
-
-const phonePattern = () => {
-    return /^\(\d{3}\)\s\d{3}\s-\s\d{4}$/
 }
 
 const firstFormHandler = () => {
