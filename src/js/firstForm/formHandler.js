@@ -14,7 +14,7 @@ const namePattern = () => {
 }
 
 const emailPattern = () => {
-    return /^[a-zA-Z]+@[a-zA-Z]\.[a-zA-Z]+$/
+    return /^[a-zA-Z]+@[a-zA-Z]+\.[a-zA-Z]+$/
 }
 
 const phonePattern = () => {
