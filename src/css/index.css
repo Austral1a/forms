@@ -28,11 +28,10 @@ main {
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    width: 250px;
-    height: 100%;
+    display: grid;
+    grid-template-columns: 250px;
+    justify-content: center;
+    grid-row-gap: 5px;
 }
 
 #second-form {
@@ -42,15 +41,6 @@ form {
 #third-form {
     display: none;
 }
-
-input {
-    margin-bottom: 35px;
-}
-
-select {
-    margin-bottom: 15px;
-}
-
 input:last-child {
     margin-bottom: 0;
 }

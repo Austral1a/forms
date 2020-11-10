@@ -23,7 +23,7 @@ const switchToNextForm = (fromForm, toForm, formEvent, lastForm) => {
         fromForm.style.display = 'none'
 
         // show next form
-        toForm.style.display = 'flex'
+        toForm.style.display = 'grid'
     }
 }
 
