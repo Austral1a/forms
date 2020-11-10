@@ -18,6 +18,13 @@ export const changeTheme = (themeMode) => {
 
 export const setTheme = () => {
     const button = document.querySelector('.theme__button_change')
+    const theme = localStorage.getItem('theme')
+
+    // if theme value is already set up in localStorage
+    // change theme to that mode
+    if(theme) {
+        changeTheme(theme)
+    }
 
     button.addEventListener('click', () => {
         // get previous theme
