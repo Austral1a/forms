@@ -3,10 +3,9 @@ import {isInputNotValid} from '../js/firstForm/inputValidator'
 describe('isInputNotValid', () => {
     describe("with '/[a-zA-Z]/' re pattern for first name and last name", () => {
         const re = /^[a-zA-Z]+$/ // matches first name, last name
-
         it("'Kyle222' must return false", () => {
             const text = 'Kyle22'
-            expect(isInputNotValid(re, text)).not.toBeFalsy()
+            expect(isInputNotValid(re, text).mockReturnValue(true)).not.toBeFalsy()
         })
 
         it("KyellEEE must return true", () => {
