@@ -1,11 +1,11 @@
-import {isInputNotValid} from '../js/firstForm/inputValidator'
+import isInputNotValid from '../js/firstForm/isInputNotValid'
 
 describe('isInputNotValid', () => {
-    describe("with '/[a-zA-Z]/' re pattern for first name and last name", () => {
+    describe("with '/[a-zA-Z]+/' re pattern for first name and last name", () => {
         const re = /^[a-zA-Z]+$/ // matches first name, last name
         it("'Kyle222' must return false", () => {
             const text = 'Kyle22'
-            expect(isInputNotValid(re, text).mockReturnValue(true)).not.toBeFalsy()
+            expect(isInputNotValid(re, text)).not.toBeFalsy()
         })
 
         it("KyellEEE must return true", () => {
@@ -17,10 +17,15 @@ describe('isInputNotValid', () => {
             const text = 'Kyl3iee'
             expect(isInputNotValid(re, text)).not.toBeFalsy()
         })
+
+        it("empty string must return true", () => {
+            const text = ''
+            expect(isInputNotValid(re, text)).not.toBeFalsy()
+        })
     })
 
-    describe("with '/^[a-zA-Z]*@[a-zA-Z]*\.[a-zA-Z]*$/g' re pattern for email", () => {
-        const re = /^[a-zA-Z]*@[a-zA-Z]*\.[a-zA-Z]*$/g // matches email
+    describe("with '/^[a-zA-Z]+@[a-zA-Z]+\.[a-zA-Z]+$/g' re pattern for email", () => {
+        const re = /^[a-zA-Z]+@[a-zA-Z]+\.[a-zA-Z]+$/g // matches email
 
         it("example@e.com must return false", () => {
             const text = 'example@e.com'
@@ -39,6 +44,21 @@ describe('isInputNotValid', () => {
 
         it("example@com must return true", () => {
             const text = 'example@com'
+            expect(isInputNotValid(re, text)).not.toBeFalsy()
+        })
+
+        it("'ex@.com' must return true", () => {
+            const text = 'ex@.com'
+            expect(isInputNotValid(re, text)).not.toBeFalsy()
+        })
+
+        it("'@ex.com' must return true", () => {
+            const text = '@ex.com'
+            expect(isInputNotValid(re, text)).not.toBeFalsy()
+        })
+
+        it("'ex@co.' must return true", () => {
+            const text = 'ex@co.'
             expect(isInputNotValid(re, text)).not.toBeFalsy()
         })
     })
