@@ -7,10 +7,6 @@ const switchToNextForm = (fromForm, toForm, formEvent, lastForm) => {
     if(errors.size) {
         formEvent.preventDefault()
 
-        Object.values(errors).forEach((error) => {
-            errorsContainer.innerText += error
-        })
-        // otherwise, show next form
     } else {
         if(lastForm) {
             alert('success')
