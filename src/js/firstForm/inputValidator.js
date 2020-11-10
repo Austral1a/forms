@@ -1,7 +1,5 @@
 import {errors} from '../index.js'
-export const isInputNotValid = (validator, inputText) => {
-    return !validator.test(inputText)
-}
+import isInputNotValid from './isInputNotValid'
 
 export const saveErrorInStorage = (validator, inputText, inputName, errorText) => {
     const inputError = document.querySelector(`.form__${inputName}-error`)
