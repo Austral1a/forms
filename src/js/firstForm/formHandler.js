@@ -15,11 +15,9 @@ const validationErrors = {
 const firstFormHandler = () => {
     const firstForm = document.querySelector('#first-form')
     const secondForm = document.querySelector('#second-form')
-    const errorsContainer = document.querySelector('header')
 
     firstForm.addEventListener('submit', (e) => {
         e.preventDefault()
-        errorsContainer.innerHTML = ''
         errors.clear()
 
         const firstNameVal = document.querySelector('#first-name').value

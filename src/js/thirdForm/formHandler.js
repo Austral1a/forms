@@ -20,11 +20,9 @@ export const cvvPattern = () => {
 export const thirdFormHandler = () => {
     const thirdForm = document.querySelector('#third-form')
     const successPayment = document.querySelector('#success-payment')
-    const errorsContainer = document.querySelector('header')
 
     thirdForm.addEventListener('submit', (e) => {
         e.preventDefault()
-        errorsContainer.innerHTML = ''
         errors.clear()
 
         const card = document.querySelector('#card').value
