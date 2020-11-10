@@ -5,10 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="754554ae-4d74-44cd-8738-d4104f6f2d95" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__tests__/expiryDayValidation.test.js" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/fourForm/formHandler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__tests__/emailPattern.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__tests__/emailPattern.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/__tests__/isInputNotValid.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__tests__/isInputNotValid.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__tests__/namesPattern.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__tests__/namesPattern.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__tests__/phonePattern.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__tests__/phonePattern.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__tests__/showAppropriateSubscripton.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__tests__/showAppropriateSubscripton.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__tests__/subscription.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__tests__/subscription.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/firstForm/emailPattern.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/secondForm/emailPattern.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/firstForm/formHandler.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/firstForm/inputPhoneMask.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/secondForm/inputPhoneMask.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/firstForm/inputValidator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/secondForm/inputValidator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/firstForm/isInputNotValid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/secondForm/isInputNotValid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/firstForm/namePattern.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/secondForm/namePattern.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/firstForm/phonePattern.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/secondForm/phonePattern.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/secondForm/formHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/secondForm/formHandler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/secondForm/showAppropriateSubscription.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/thirdForm/showAppropriateSubscription.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/thirdForm/expiryDayMask.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/fourForm/expiryDayMask.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/thirdForm/expiryDayValidation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/fourForm/expiryDayValidation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/thirdForm/formHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/thirdForm/formHandler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/thirdForm/inputCardMask.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/fourForm/inputCardMask.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +38,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBowerSettings">
+    <node-interpreter value="project" />
+    <bower-package value="" />
+    <bower.json value="" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -37,9 +63,15 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/jest" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Jest.isInputNotValid.with '/[a-zA-Z]/' re pattern for first name and last name.'Kyle222' must return false">
@@ -141,106 +173,16 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="942" y="202" key="#Inspections" timestamp="1604907080479">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="942" y="202" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1604907080479" />
-    <state x="799" y="216" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605003491112">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="799" y="216" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605003491112" />
-    <state x="1046" y="303" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper" timestamp="1604906968962">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="1046" y="303" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper/0.0.1920.1040@0.0.1920.1040" timestamp="1604906968962" />
-    <state x="1220" y="278" key="FileChooserDialogImpl" timestamp="1604923703366">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="1220" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1604923703366" />
-    <state width="1118" height="275" key="GridCell.Tab.0.bottom" timestamp="1605004898640">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1118" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605004898640" />
-    <state width="1118" height="275" key="GridCell.Tab.0.center" timestamp="1605004898640">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1118" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605004898640" />
-    <state width="1118" height="275" key="GridCell.Tab.0.left" timestamp="1605004898640">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1118" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605004898640" />
-    <state width="1118" height="275" key="GridCell.Tab.0.right" timestamp="1605004898640">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1118" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605004898640" />
-    <state width="1118" height="386" key="GridCell.Tab.1.bottom" timestamp="1605004890107">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1118" height="386" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605004890107" />
-    <state width="1118" height="386" key="GridCell.Tab.1.center" timestamp="1605004890107">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1118" height="386" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605004890107" />
-    <state width="1118" height="386" key="GridCell.Tab.1.left" timestamp="1605004890107">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1118" height="386" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605004890107" />
-    <state width="1118" height="386" key="GridCell.Tab.1.right" timestamp="1605004890107">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1118" height="386" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605004890107" />
-    <state width="1118" height="386" key="GridCell.Tab.2.bottom" timestamp="1605004890108">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1118" height="386" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605004890108" />
-    <state width="1118" height="386" key="GridCell.Tab.2.center" timestamp="1605004890108">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1118" height="386" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605004890108" />
-    <state width="1118" height="386" key="GridCell.Tab.2.left" timestamp="1605004890107">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1118" height="386" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605004890107" />
-    <state width="1118" height="386" key="GridCell.Tab.2.right" timestamp="1605004890108">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1118" height="386" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605004890108" />
-    <state width="1118" height="386" key="GridCell.Tab.3.bottom" timestamp="1605004890108">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1118" height="386" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605004890108" />
-    <state width="1118" height="386" key="GridCell.Tab.3.center" timestamp="1605004890108">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1118" height="386" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605004890108" />
-    <state width="1118" height="386" key="GridCell.Tab.3.left" timestamp="1605004890108">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1118" height="386" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605004890108" />
-    <state width="1118" height="386" key="GridCell.Tab.3.right" timestamp="1605004890108">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1118" height="386" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605004890108" />
-    <state x="678" y="254" key="SettingsEditor" timestamp="1605003373363">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="678" y="254" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605003373363" />
-    <state x="763" y="252" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1605003261450">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="763" y="252" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1040@0.0.1920.1040" timestamp="1605003261450" />
-    <state x="1130" y="0" width="797" height="1047" key="dock-window-1" timestamp="1604994571059">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="1130" y="0" width="797" height="1047" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1604994571059" />
-    <state x="1005" y="244" key="run.anything.popup" timestamp="1605004071317">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="1005" y="244" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605004071317" />
-    <state x="1000" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1605004129599">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="1000" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605004129599" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

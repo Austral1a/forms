@@ -1,4 +1,4 @@
-import {subscriptions as sub} from '../js/secondForm/showAppropriateSubscription'
+import {subscriptions as sub} from '../js/thirdForm/showAppropriateSubscription'
 
 describe('subscription must return accurate value', () => {
     describe('country - us', () => {

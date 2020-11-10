@@ -66,11 +66,26 @@ form {
        display: grid;
     }
 }
+.form-first {
+    .form__element-wrapper {
+        position: relative;
+        .form__password-show {
+            color: red;
+            position: absolute;
+            right: 10px;
+            top: 24px;
+        }
 
-#second-form {
+    }
+}
+
+.form-second {
+    display: none;
+}
+.form-third {
     display: none;
 }
 
-#third-form {
+.form-four {
     display: none;
 }

@@ -1,4 +1,4 @@
-import emailPattern from '../js/firstForm/emailPattern'
+import emailPattern from '../js/secondForm/emailPattern'
 
 describe('function emailPattern must return certain pattern', () => {
     it('email pattern', () => {
