@@ -3,7 +3,7 @@ import '../css/index.scss';
 import firstFormHandler from './firstForm/formHandler';
 import showPassword from './firstForm/showPassword';
 
-import inputPhoneMask from './secondForm/inputPhoneMask';
+import {phoneMask} from './common/masks'
 import secondFormHandler from './secondForm/formHandler';
 
 import thirdFormHandler from './thirdForm/formHandler';
@@ -22,7 +22,7 @@ firstFormHandler();
 showPassword();
 
 secondFormHandler();
-inputPhoneMask();
+phoneMask();
 
 thirdFormHandler();
 showAppropriateSubscription();
