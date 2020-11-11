@@ -1,7 +1,6 @@
 import {inputValidator} from '../secondForm/inputValidator';
 import {errors} from '../index';
-import usernamePattern from './usernamePattern';
-import passwordPattern from './passwordPattern';
+import patterns from '../common/pattern'
 import switchToNextForm from '../switchToNextForm';
 
 const validationErrors = {
@@ -20,8 +19,8 @@ const firstFormHandler = () => {
         const usernameVal = document.querySelector('#username').value;
         const passwordVal = document.querySelector('#password').value;
 
-        inputValidator(usernameVal, usernamePattern(), 'username', validationErrors.username);
-        inputValidator(passwordVal, passwordPattern(), 'password', validationErrors.password);
+        inputValidator(usernameVal, patterns.username, 'username', validationErrors.username);
+        inputValidator(passwordVal, patterns.password, 'password', validationErrors.password);
 
         switchToNextForm(firstForm, secondForm, e);
     });
