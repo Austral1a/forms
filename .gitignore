@@ -1,3 +1,4 @@
 node_modules
 .idea
-dist/main.bundle.js
+dist/*
+!dist/index.html
