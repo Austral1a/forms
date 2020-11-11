@@ -1,5 +1,5 @@
 const emailPattern = () => {
-    return /^[a-zA-Z]+@[a-zA-Z]+\.[a-zA-Z]+$/
-}
+    return /^[a-zA-Z]+@[a-zA-Z]+\.[a-zA-Z]+$/;
+};
 
-export default emailPattern
+export default emailPattern;

@@ -1,5 +1,5 @@
 const namePattern = () => {
-    return /^[a-zA-Z]+$/
-}
+    return /^[a-zA-Z]+$/;
+};
 
-export default namePattern
+export default namePattern;

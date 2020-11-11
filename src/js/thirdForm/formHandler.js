@@ -1,14 +1,14 @@
-import switchToNextForm from '../switchToNextForm'
+import switchToNextForm from '../switchToNextForm';
 
 const thirdFormHandler = () => {
-    const thirdForm = document.querySelector('.form-third')
-    const fourForm = document.querySelector('.form-four')
+    const thirdForm = document.querySelector('.form-third');
+    const fourForm = document.querySelector('.form-four');
     thirdForm.addEventListener('submit', (e) => {
-        e.preventDefault()
+        e.preventDefault();
 
-        switchToNextForm(thirdForm, fourForm, e)
-    })
+        switchToNextForm(thirdForm, fourForm, e);
+    });
 
-}
+};
 
-export default thirdFormHandler
+export default thirdFormHandler;

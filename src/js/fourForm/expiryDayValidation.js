@@ -1,11 +1,11 @@
-import {errors} from '../index'
+import {errors} from '../index';
 
 const expiryDayValidation = (year, month, inputName, errorText) => {
-    const currentDay = new Date()
-    const expiryDay = new Date(+year, +month - 1, 1)
+    const currentDay = new Date();
+    const expiryDay = new Date(+year, +month - 1, 1);
 
     const inputError = document.querySelector(`.form__${inputName}-error`)
-    const input = document.querySelector(`#${inputName}`)
+    const input = document.querySelector(`#${inputName}`);;
 
     // if expiry date has arrived
     if(
@@ -13,14 +13,14 @@ const expiryDayValidation = (year, month, inputName, errorText) => {
         ||
         (currentDay > expiryDay)
     ) {
-        errors.set(inputName, errorText)
+        errors.set(inputName, errorText);
 
         // if input is not valid, render an error
-        inputError.innerText = errorText
+        inputError.innerText = errorText;
     } else {
         //if input is valid, remove error
-        inputError.innerText = ''
+        inputError.innerText = '';
     }
-}
+};
 
-export default expiryDayValidation
+export default expiryDayValidation;

@@ -11,6 +11,6 @@ const themes = {
         formElemBackColor: '#f6f5f1',
         textColor: '#fff'
     }
-}
+};
 
-export default themes
+export default themes;

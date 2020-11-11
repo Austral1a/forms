@@ -1,5 +1,5 @@
 const usernamePattern = () => {
-    return /\w+/i
-}
+    return /\w+/i;
+};
 
-export default usernamePattern
+export default usernamePattern;
