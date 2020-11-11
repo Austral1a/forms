@@ -1,4 +1,4 @@
-import {inputValidator} from './inputValidator';
+import {inputValidator} from '../common/inputValidator'
 import switchToNextForm from '../switchToNextForm';
 import {errors} from '../index';
 import patterns from '../common/patterns';

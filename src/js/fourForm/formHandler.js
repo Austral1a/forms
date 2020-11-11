@@ -1,4 +1,4 @@
-import {inputValidator} from '../secondForm/inputValidator';
+import {inputValidator} from '../common/inputValidator'
 import expiryDayValidation from './expiryDayValidation';
 import switchToNextForm from '../switchToNextForm';
 import {errors} from '../index';
