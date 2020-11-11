@@ -28,6 +28,27 @@ main {
     align-items: end;
 }
 
+.theme {
+    display: grid;
+    justify-content: start;
+    align-items: center;
+    height: 5%;
+    grid-template-columns: 120px;
+    padding-left: 10px;
+    .theme_change {
+        width: 100px;
+        height: 25px;
+        align-content: center;
+        justify-content: center;
+
+        option {
+            width: inherit;
+            height: inherit;
+        }
+    }
+
+}
+
 form {
     display: grid;
     grid-template-columns: 250px;
