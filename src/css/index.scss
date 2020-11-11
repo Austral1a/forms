@@ -70,10 +70,12 @@ form {
     .form__element-wrapper {
         position: relative;
         .form__password-show {
-            color: red;
             position: absolute;
             right: 10px;
             top: 24px;
+            width: 20px;
+            height: 20px;
+            background-repeat: no-repeat;
         }
 
     }
