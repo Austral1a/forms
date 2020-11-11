@@ -2,19 +2,12 @@ import {inputValidator} from '../secondForm/inputValidator';
 import expiryDayValidation from './expiryDayValidation';
 import switchToNextForm from '../switchToNextForm';
 import {errors} from '../index';
+import patterns from '../common/pattern'
 
 const validationErrors = {
     card: 'Card number must contain 16 numbers, not less, not more',
     expirationDate: 'Expiration date must be bigger than today',
     cvv: 'CVV code must contain only 3 numbers'
-};
-
-export const cardNumberPattern = () => {
-    return /^\d{4}\s\d{4}\s\d{4}\s\d{4}$/;
-};
-
-export const cvvPattern = () => {
-    return /^\d{3}$/;
 };
 
 export const fourFormHandler = () => {
@@ -32,9 +25,9 @@ export const fourFormHandler = () => {
         const expiryYear = expirationDate.replace(/\d+\//, '');
         const expiryMonth = expirationDate.replace(/\/\d+/, '');
 
-        inputValidator(card, cardNumberPattern(), 'card', validationErrors.card);
+        inputValidator(card, patterns.card, 'card', validationErrors.card);
         expiryDayValidation(expiryYear, expiryMonth, 'expiration-date', validationErrors.expirationDate);
-        inputValidator(cvv, cvvPattern(), 'cvv', validationErrors.cvv);
+        inputValidator(cvv, patterns.cvv, 'cvv', validationErrors.cvv);
 
         switchToNextForm(fourForm, successPayment, e, true);
     });
