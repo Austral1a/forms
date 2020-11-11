@@ -11,7 +11,7 @@ import {showAppropriateSubscription} from "./thirdForm/showAppropriateSubscripti
 
 import {fourFormHandler} from "./fourForm/formHandler";
 import inputCardMask from "./fourForm/inputCardMask";
-import expiryDayMask from "./fourForm/expiryDayMask";
+import {expiryDayMask} from './common/masks'
 
 import {setTheme} from './changeTheme';
 

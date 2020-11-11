@@ -1,4 +1,4 @@
-const expiryDayMask = () => {
+export const expiryDayMask = () => {
     const expiryDay = document.querySelector('#expiration-date');
 
     expiryDay.addEventListener('input', (e) => {
@@ -6,5 +6,3 @@ const expiryDayMask = () => {
         e.target.value = !x[2] ? x[1] : x[1] + '/' + x[2];
     });
 };
-
-export default expiryDayMask;
