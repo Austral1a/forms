@@ -10,7 +10,7 @@ import thirdFormHandler from './thirdForm/formHandler';
 import {showAppropriateSubscription} from "./thirdForm/showAppropriateSubscription";
 
 import {fourFormHandler} from "./fourForm/formHandler";
-import inputCardMask from "./fourForm/inputCardMask";
+import {cardMask} from './common/masks';
 import {expiryDayMask} from './common/masks'
 
 import {setTheme} from './changeTheme';
@@ -28,7 +28,7 @@ thirdFormHandler();
 showAppropriateSubscription();
 
 fourFormHandler();
-inputCardMask();
+cardMask();
 expiryDayMask();
 
 setTheme();
