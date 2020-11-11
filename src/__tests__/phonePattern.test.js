@@ -1,4 +1,4 @@
-import phonePattern from '../js/firstForm/phonePattern'
+import phonePattern from '../js/secondForm/phonePattern'
 
 describe('function phonePattern must return certain pattern', () => {
     it('phone pattern', () => {

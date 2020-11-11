@@ -12,7 +12,21 @@
         <button class="theme__button_change">switch</button>
     </header>
     <main>
-        <form novalidate action="/" method="get" class="form__first" id="first-form">
+        <form action="/" method="get" class="form-first">
+            <div class="form__element-wrapper">
+                <label for="username">Username</label>
+                <input name="username" type="text" id="username">
+                <p class="form__error form__username-error"></p>
+            </div>
+            <div class="form__element-wrapper">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password">
+                <span class="form__password-show">A</span>
+                <p class="form__error form__password-error"></p>
+            </div>
+            <input type="submit" value="Next">
+        </form>
+        <form novalidate action="/" method="get" class="form-second">
             <div class="form__element-wrapper">
                 <label for="first-name">First Name</label>
                 <input name="name" type="text" placeholder="First Name" id="first-name">
@@ -35,7 +49,7 @@
             </div>
             <input name="" type="submit" value="Next" id="submit">
         </form>
-        <form id="second-form" action="/" method="get" class="form__second">
+        <form action="/" method="get" class="form-third">
             <select name="subs_country" id="subscription-country">
                 <option selected value="us">United States</option>
                 <option value="ua">Ukraine</option>
@@ -49,7 +63,7 @@
             <div id="subscription-result">
             </div>
         </form>
-        <form id="third-form" action="/" method="get" class="form__third">
+        <form id="third-form" action="/" method="get" class="form-four">
             <div class="form__element-wrapper">
                 <label for="card">Card</label>
                 <input type="text" placeholder="1234 1234 1234 1234" id="card" name="card">
