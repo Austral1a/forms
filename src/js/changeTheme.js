@@ -17,23 +17,30 @@ export const changeTheme = (themeMode) => {
 
 
 export const setTheme = () => {
-    const button = document.querySelector('.theme__button_change')
     const theme = localStorage.getItem('theme')
+    const select = document.querySelector('.theme_change')
 
     // if theme value is already set up in localStorage
     // change theme to that mode
+    // and select that theme mode, in select tag
     if(theme) {
         changeTheme(theme)
+        select.value = theme
+        select.dispatchEvent(new Event('change'))
     }
 
-    button.addEventListener('click', () => {
-        // get previous theme
-        const prevTheme = localStorage.getItem('theme')
-        // if prev theme is dark change it to light
-        // if prev theme is light change it to dark
-        prevTheme === 'dark' ? localStorage.setItem('theme', 'light') : localStorage.setItem('theme', 'dark')
+    select.addEventListener('change', (e) => {
+        // if selected dark mode, set dark theme mode into local storage
+        if(e.target.value === 'dark') {
+            localStorage.setItem('theme', 'dark')
+            console.log(e.target.value)
+            // if selected light mode, set light mode into local storage
+        } else if(e.target.value === 'light') {
+            localStorage.setItem('theme', 'light')
+        }
+
+        // get updated theme, from local storage
         const newTheme = localStorage.getItem('theme')
-        // apply changes to dom nodes
         changeTheme(newTheme)
     })
 }
