@@ -2,13 +2,7 @@ import {inputValidator} from '../common/inputValidator'
 import switchToNextForm from '../switchToNextForm';
 import {errors} from '../index';
 import patterns from '../common/patterns';
-
-const validationErrors = {
-    first_name: 'First name must contain only letters and not to be empty',
-    last_name: 'Last name must contain only letters and not to be empty',
-    email: "Email must be appropriate to 'email@example.com'",
-    phone: "Phone must be appropriate to '(123) 456 - 7890'"
-};
+import validationErrors from '../common/validationErrors'
 
 const secondFormHandler = () => {
     const secondForm = document.querySelector('.form-second');

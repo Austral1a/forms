@@ -1,12 +1,8 @@
 import {inputValidator} from '../common/inputValidator'
 import {errors} from '../index';
 import patterns from '../common/patterns'
+import validationErrors from '../common/validationErrors'
 import switchToNextForm from '../switchToNextForm';
-
-const validationErrors = {
-    username: 'Username must contain only letters and numbers and not to be empty',
-    password: 'Password must contain at least 6 characters'
-};
 
 const firstFormHandler = () => {
     const firstForm = document.querySelector('.form-first');

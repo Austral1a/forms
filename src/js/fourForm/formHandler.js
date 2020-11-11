@@ -3,12 +3,7 @@ import expiryDayValidation from './expiryDayValidation';
 import switchToNextForm from '../switchToNextForm';
 import {errors} from '../index';
 import patterns from '../common/patterns'
-
-const validationErrors = {
-    card: 'Card number must contain 16 numbers, not less, not more',
-    expirationDate: 'Expiration date must be bigger than today',
-    cvv: 'CVV code must contain only 3 numbers'
-};
+import validationErrors from '../common/validationErrors'
 
 export const fourFormHandler = () => {
     const fourForm = document.querySelector('.form-four');
