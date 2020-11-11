@@ -1,9 +1,7 @@
 import {inputValidator} from './inputValidator';
 import switchToNextForm from '../switchToNextForm';
 import {errors} from '../index';
-import namePattern from './namePattern';
-import emailPattern from './emailPattern';
-import phonePattern from './phonePattern';
+import patterns from '../common/pattern';
 
 const validationErrors = {
     first_name: 'First name must contain only letters and not to be empty',
@@ -25,10 +23,10 @@ const secondFormHandler = () => {
         const emailVal = document.querySelector('#email').value;
         const phoneVal = document.querySelector('#phone').value;
 
-        inputValidator(firstNameVal, namePattern(), 'first-name', validationErrors.first_name);
-        inputValidator(lastNameVal, namePattern(), 'last-name', validationErrors.last_name);
-        inputValidator(emailVal, emailPattern(), 'email', validationErrors.email);
-        inputValidator(phoneVal, phonePattern(), 'phone', validationErrors.phone);
+        inputValidator(firstNameVal, patterns.name, 'first-name', validationErrors.first_name);
+        inputValidator(lastNameVal, patterns.name, 'last-name', validationErrors.last_name);
+        inputValidator(emailVal, patterns.email, 'email', validationErrors.email);
+        inputValidator(phoneVal, patterns.phone, 'phone', validationErrors.phone);
 
         switchToNextForm(secondForm, thirdForm, e);
     });
