@@ -5,7 +5,6 @@ const expiryDayValidation = (year, month, inputName, errorText) => {
     const expiryDay = new Date(+year, +month - 1, 1);
 
     const inputError = document.querySelector(`.form__${inputName}-error`)
-    const input = document.querySelector(`#${inputName}`);;
 
     // if expiry date has arrived
     if(
