@@ -15,10 +15,8 @@ const expiryDayValidation = (year, month, inputName, errorText) => {
     ) {
         errors.set(inputName, errorText)
 
-        input.style.marginBottom = '5px'
         // if input is not valid, render an error
         inputError.innerText = errorText
-        inputError.style.marginBottom = '20px'
     } else {
         //if input is valid, remove error
         inputError.innerText = ''
