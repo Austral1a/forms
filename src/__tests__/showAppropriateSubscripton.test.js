@@ -1,4 +1,4 @@
-import {showAppropriateSubscription, subscriptions} from '../js/secondForm/showAppropriateSubscription'
+import {showAppropriateSubscription, subscriptions} from '../js/thirdForm/showAppropriateSubscription'
 import {JSDOM} from 'jsdom'
 
 describe('must render price chosen subscription', () => {

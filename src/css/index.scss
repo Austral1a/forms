@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
 $body-back-color: #9EB3C2;
 $form-back-color: #E6EBEF;
+$input-error-color: #d84040;
 
 @mixin form-element-padding {
     padding: 5px 7px;
@@ -34,12 +35,15 @@ form {
     margin: 0 auto;
     padding: 30px 0;
     justify-content: center;
-    min-height: 350px;
+    min-height: 450px;
+    max-height: 450px;
     width: 400px;
     background-color: $form-back-color;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     border-radius: 2px;
     align-items: center;
+    align-content: center;
+    grid-gap: 10px;
 
     input {
         @include form-element-padding;
@@ -51,12 +55,37 @@ form {
     #subscription-result {
         text-align: center;
     }
+
+    .form__error {
+        color: $input-error-color;
+        font-size: 0.9em;
+        font-weight: bolder;
+    }
+
+    .form__element-wrapper {
+       display: grid;
+    }
+}
+.form-first {
+    .form__element-wrapper {
+        position: relative;
+        .form__password-show {
+            color: red;
+            position: absolute;
+            right: 10px;
+            top: 24px;
+        }
+
+    }
 }
 
-#second-form {
+.form-second {
+    display: none;
+}
+.form-third {
     display: none;
 }
 
-#third-form {
+.form-four {
     display: none;
 }

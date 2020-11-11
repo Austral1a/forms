@@ -1,26 +1,33 @@
 import '../css/index.scss'
 
-import inputPhoneMask from './firstForm/inputPhoneMask'
 import firstFormHandler from './firstForm/formHandler'
+import showPassword from './firstForm/showPassword'
 
+import inputPhoneMask from './secondForm/inputPhoneMask'
 import secondFormHandler from './secondForm/formHandler'
-import {showAppropriateSubscription} from "./secondForm/showAppropriateSubscription";
 
-import {thirdFormHandler} from "./thirdForm/formHandler";
-import inputCardMask from "./thirdForm/inputCardMask";
-import expiryDayMask from "./thirdForm/expiryDayMask";
+import thirdFormHandler from './thirdForm/formHandler'
+import {showAppropriateSubscription} from "./thirdForm/showAppropriateSubscription";
+
+import {fourFormHandler} from "./fourForm/formHandler";
+import inputCardMask from "./fourForm/inputCardMask";
+import expiryDayMask from "./fourForm/expiryDayMask";
 
 import {setTheme} from './changeTheme'
 
 export let errors = new Map()
 
-inputPhoneMask()
+
 firstFormHandler()
+showPassword()
 
 secondFormHandler()
-showAppropriateSubscription()
+inputPhoneMask()
 
 thirdFormHandler()
+showAppropriateSubscription()
+
+fourFormHandler()
 inputCardMask()
 expiryDayMask()
 
