@@ -2,7 +2,7 @@ import {inputValidator} from '../secondForm/inputValidator';
 import expiryDayValidation from './expiryDayValidation';
 import switchToNextForm from '../switchToNextForm';
 import {errors} from '../index';
-import patterns from '../common/pattern'
+import patterns from '../common/patterns'
 
 const validationErrors = {
     card: 'Card number must contain 16 numbers, not less, not more',

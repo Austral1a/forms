@@ -1,7 +1,7 @@
 import {inputValidator} from './inputValidator';
 import switchToNextForm from '../switchToNextForm';
 import {errors} from '../index';
-import patterns from '../common/pattern';
+import patterns from '../common/patterns';
 
 const validationErrors = {
     first_name: 'First name must contain only letters and not to be empty',

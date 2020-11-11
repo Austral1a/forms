@@ -1,6 +1,6 @@
 import {inputValidator} from '../secondForm/inputValidator';
 import {errors} from '../index';
-import patterns from '../common/pattern'
+import patterns from '../common/patterns'
 import switchToNextForm from '../switchToNextForm';
 
 const validationErrors = {
