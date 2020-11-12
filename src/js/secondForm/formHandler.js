@@ -10,15 +10,20 @@ const secondFormHandler = () => {
         e.preventDefault();
         errors.clear();
 
-        const firstNameVal = document.querySelector('#first-name').value;
-        const lastNameVal = document.querySelector('#last-name').value;
-        const emailVal = document.querySelector('#email').value;
-        const phoneVal = document.querySelector('#phone').value;
+        const firstName = document.querySelector('#first-name');
+        const lastName = document.querySelector('#last-name');
+        const email = document.querySelector('#email');
+        const phone = document.querySelector('#phone');
 
-        inputValidator(firstNameVal, patterns.name, 'first-name', validationErrors.first_name);
-        inputValidator(lastNameVal, patterns.name, 'last-name', validationErrors.last_name);
-        inputValidator(emailVal, patterns.email, 'email', validationErrors.email);
-        inputValidator(phoneVal, patterns.phone, 'phone', validationErrors.phone);
+        if(!firstName) return
+        if(!lastName) return
+        if(!email) return
+        if(!phone) return
+
+        inputValidator(firstName.value, patterns.name, 'first-name', validationErrors.first_name);
+        inputValidator(lastName.value, patterns.name, 'last-name', validationErrors.last_name);
+        inputValidator(email.value, patterns.email, 'email', validationErrors.email);
+        inputValidator(phone.value, patterns.phone, 'phone', validationErrors.phone);
 
         switchToNextForm(secondForm, thirdForm, e);
     });

@@ -9,13 +9,20 @@ export const fourFormHandler = () => {
     const fourForm = document.querySelector('.form-four');
     const successPayment = document.querySelector('#success-payment');
 
+    if(!fourForm) return
+    if(!successPayment) return
+
     fourForm.addEventListener('submit', (e) => {
         e.preventDefault();
         errors.clear();
 
-        const card = document.querySelector('#card').value;
-        const expirationDate =document.querySelector('#expiration-date').value;
-        const cvv = document.querySelector('#cvv').value;
+        const card = document.querySelector('#card');
+        const expirationDate =document.querySelector('#expiration-date');
+        const cvv = document.querySelector('#cvv');
+
+        if(!card) return
+        if(!expirationDate) return
+        if(!cvv) return
 
         const expiryYear = expirationDate.replace(/\d+\//, '');
         const expiryMonth = expirationDate.replace(/\/\d+/, '');

@@ -1,7 +1,8 @@
 import {errors} from '../index.js';
 import isInputNotValid from '../common/isInputNotValid'
 
-export const saveErrorInStorage = (validator, inputText, inputName, errorText) => {
+// saving errors needs to allow user switch to the next form
+export const saveError = (validator, inputText, inputName, errorText) => {
     const inputError = document.querySelector(`.form__${inputName}-error`);
     const input = document.querySelector(`#${inputName}`);
     if(isInputNotValid(validator, inputText)) {
@@ -18,5 +19,5 @@ export const saveErrorInStorage = (validator, inputText, inputName, errorText) =
 };
 export const inputValidator = (inputText, rePattern, inputName, errorText) => {
     const validator = new RegExp(rePattern);
-    saveErrorInStorage(validator, inputText, inputName, errorText);
+    saveError(validator, inputText, inputName, errorText);
 };

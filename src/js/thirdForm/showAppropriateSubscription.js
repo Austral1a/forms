@@ -9,6 +9,10 @@ export const showAppropriateSubscription = () => {
     const subscriptionPlan = document.querySelector('#subscription-plan')
     const subscriptionResult = document.querySelector('#subscription-result')
 
+    if(!subscriptionCountry) return
+    if(!subscriptionPlan) return
+    if(!subscriptionResult) return
+
     subscriptionCountry.addEventListener('change', () => listener(
         subscriptionCountry,
         subscriptionPlan,

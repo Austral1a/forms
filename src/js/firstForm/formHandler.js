@@ -10,11 +10,14 @@ const firstFormHandler = () => {
         e.preventDefault();
         errors.clear();
 
-        const usernameVal = document.querySelector('#username').value;
-        const passwordVal = document.querySelector('#password').value;
+        let username = document.querySelector('#username');
+        let password = document.querySelector('#password');
 
-        inputValidator(usernameVal, patterns.username, 'username', validationErrors.username);
-        inputValidator(passwordVal, patterns.password, 'password', validationErrors.password);
+        if(!username) return
+        if(!password) return
+
+        inputValidator(username.value, patterns.username, 'username', validationErrors.username);
+        inputValidator(password.value, patterns.password, 'password', validationErrors.password);
 
         switchToNextForm(firstForm, secondForm, e);
     });
