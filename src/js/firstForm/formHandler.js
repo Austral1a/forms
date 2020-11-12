@@ -1,8 +1,5 @@
-import {inputValidator} from '../common/inputValidator'
 import {errors} from '../index';
-import patterns from '../common/patterns'
-import validationErrors from '../common/validationErrors'
-import switchToNextForm from '../switchToNextForm';
+import {inputValidator, patterns, validationErrors} from './index'
 
 const firstFormHandler = () => {
     const firstForm = document.querySelector('.form-first');
