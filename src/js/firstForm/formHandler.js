@@ -1,5 +1,6 @@
 import {errors} from '../index';
 import {inputValidator, patterns, validationErrors} from './index'
+import switchToNextForm from '../switchToNextForm'
 
 const firstFormHandler = () => {
     const firstForm = document.querySelector('.form-first');
