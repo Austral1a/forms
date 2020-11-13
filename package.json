@@ -3,7 +3,8 @@
   "jest": {
     "verbose": true,
     "moduleNameMapper": {
-      "\\.s[ac]ss": "identity-obj-proxy"
+      "\\.s[ac]ss$": "identity-obj-proxy",
+      "\\.svg$": "<rootDir>/src/__mocks__/fileMock.js"
     }
   },
   "version": "1.0.0",

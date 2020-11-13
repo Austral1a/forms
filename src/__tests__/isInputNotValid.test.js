@@ -1,4 +1,4 @@
-import isInputNotValid from '../js/secondForm/isInputNotValid'
+import isInputNotValid from '../js/common/isInputNotValid'
 
 describe('isInputNotValid', () => {
     describe("with '/[a-zA-Z]+/' re pattern for first name and last name", () => {
