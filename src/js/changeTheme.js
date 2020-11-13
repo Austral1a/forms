@@ -6,6 +6,11 @@ export const changeTheme = (themeMode) => {
     const inputs = document.querySelectorAll('input');
     const selects = document.querySelectorAll('select');
 
+    if(!body) return
+    if(!forms.length) return
+    if(!inputs.length) return
+    if(!selects.length) return
+
     body.style.backgroundColor = themes[themeMode].bodyBackColor;
     body.style.color = themes[themeMode].textColor;
 
@@ -19,6 +24,8 @@ export const changeTheme = (themeMode) => {
 export const setTheme = () => {
     const theme = localStorage.getItem('theme');
     const select = document.querySelector('.theme_change');
+
+    if(!select) return
 
     // if theme value is already set up in localStorage
     // change theme to that mode
