@@ -9,6 +9,6 @@ export const subscriptions = {
         basic: `${20 * 28}₴`,
         premium: `${60 * 28}₴`
     }
-}
+};
 
-export default subscriptions
+export default subscriptions;
