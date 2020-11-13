@@ -8,10 +8,7 @@ export const saveError = (validator, inputText, inputName, errorText) => {
     if(!isInputValid(validator, inputText)) {
         errors.set(inputName, errorText);
 
-        input.style.marginBottom = '5px';
-
         inputError.innerText = errorText;
-        inputError.style.marginBottom = '5px';
     } else {
 
         inputError.innerText = '';
