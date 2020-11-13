@@ -6,6 +6,6 @@ const patterns = {
     password: /\w{6,}/,
     card: /^\d{4}\s\d{4}\s\d{4}\s\d{4}$/,
     cvv: /^\d{3}$/
-}
+};
 
-export default patterns
+export default patterns;

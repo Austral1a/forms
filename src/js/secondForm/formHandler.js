@@ -1,6 +1,6 @@
 import switchToNextForm from '../switchToNextForm';
 import {errors} from '../index';
-import {inputValidator, patterns, validationErrors} from './index'
+import {inputValidator, patterns, validationErrors} from './index';
 
 const secondFormHandler = () => {
     const secondForm = document.querySelector('.form-second');
@@ -15,10 +15,10 @@ const secondFormHandler = () => {
         const email = document.querySelector('#email');
         const phone = document.querySelector('#phone');
 
-        if(!firstName) return
-        if(!lastName) return
-        if(!email) return
-        if(!phone) return
+        if(!firstName) return;
+        if(!lastName) return;
+        if(!email) return;
+        if(!phone) return;
 
         inputValidator(firstName.value, patterns.name, 'first-name', validationErrors.first_name);
         inputValidator(lastName.value, patterns.name, 'last-name', validationErrors.last_name);
