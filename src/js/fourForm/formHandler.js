@@ -1,9 +1,7 @@
-import {inputValidator} from '../common/inputValidator'
 import expiryDayValidation from './expiryDayValidation';
 import switchToNextForm from '../switchToNextForm';
 import {errors} from '../index';
-import patterns from '../common/patterns'
-import validationErrors from '../common/validationErrors'
+import{inputValidator, patterns, validationErrors} from './index'
 
 export const fourFormHandler = () => {
     const fourForm = document.querySelector('.form-four');
