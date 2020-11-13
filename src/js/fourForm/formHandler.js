@@ -7,10 +7,8 @@ import validationErrors from '../common/validationErrors'
 
 export const fourFormHandler = () => {
     const fourForm = document.querySelector('.form-four');
-    const successPayment = document.querySelector('#success-payment');
 
     if(!fourForm) return
-    if(!successPayment) return
 
     fourForm.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -24,13 +22,13 @@ export const fourFormHandler = () => {
         if(!expirationDate) return
         if(!cvv) return
 
-        const expiryYear = expirationDate.replace(/\d+\//, '');
-        const expiryMonth = expirationDate.replace(/\/\d+/, '');
+        const expiryYear = expirationDate.value.replace(/\d+\//, '');
+        const expiryMonth = expirationDate.value.replace(/\/\d+/, '');
 
-        inputValidator(card, patterns.card, 'card', validationErrors.card);
+        inputValidator(card.value, patterns.card, 'card', validationErrors.card);
         expiryDayValidation(expiryYear, expiryMonth, 'expiration-date', validationErrors.expirationDate);
-        inputValidator(cvv, patterns.cvv, 'cvv', validationErrors.cvv);
+        inputValidator(cvv.value, patterns.cvv, 'cvv', validationErrors.cvv);
 
-        switchToNextForm(fourForm, successPayment, e, true);
+        switchToNextForm(fourForm, null, e, true);
     });
 };
