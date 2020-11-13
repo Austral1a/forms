@@ -26,7 +26,7 @@ export const showAppropriateSubscription = () => {
     ));
 
     // render default subscription plan
-    subscriptionPlan.value = 'free;'
+    subscriptionPlan.value = 'free';
     subscriptionPlan.dispatchEvent(new Event('change'));
 
 };
