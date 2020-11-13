@@ -6,7 +6,6 @@ export const subscriptions = {
     },
     ua: {
         free: '0₴',
-        // imagine that price of each plan got from some resource
         basic: `${20 * 28}₴`,
         premium: `${60 * 28}₴`
     }

@@ -9,11 +9,11 @@ export const saveError = (validator, inputText, inputName, errorText) => {
         errors.set(inputName, errorText);
 
         input.style.marginBottom = '5px';
-        // if input is not valid, render an error
+
         inputError.innerText = errorText;
         inputError.style.marginBottom = '5px';
     } else {
-        //if input is valid, remove error
+
         inputError.innerText = '';
     }
 };

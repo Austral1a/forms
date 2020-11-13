@@ -39,11 +39,10 @@ export const setTheme = () => {
     select.addEventListener('change', (e) => {
         const dark = 'dark'
         const light = 'light'
-        // if selected dark mode, set dark theme mode into local storage
+
         if(e.target.value === dark) {
             localStorage.setItem('theme', dark);
-            console.log(e.target.value);
-            // if selected light mode, set light mode into local storage
+
         } else if(e.target.value === light) {
             localStorage.setItem('theme', light);
         }
